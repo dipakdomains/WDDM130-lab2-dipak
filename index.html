@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ticket Booth</h1>
+
+        <div class="form-group">
+            <label for="ticketType">Ticket Type</label>
+            <select id="ticketType">
+                <option value="">-- Select --</option>
+                <option value="REG">REG – Regular ($12.50)</option>
+                <option value="STU">STU – Student ($9.00)</option>
+                <option value="VIP">VIP – VIP ($25.00)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="text" id="quantity" placeholder="e.g. 2">
+        </div>
+
+        <div class="form-group">
+            <label for="promoCode">Promo Code <span>(optional)</span></label>
+            <input type="text" id="promoCode" placeholder="e.g. SAVE5">
+        </div>
+
+        <div id="errorArea"></div>
+
+        <div class="btn-row">
+            <button id="btnAdd">Add Purchase</button>
+            <button id="btnSummary" class="btn-grey">Finish / Summary</button>
+        </div>
+
+        <hr>
+
+        <h2>Receipts</h2>
+        <div id="receiptArea"><p class="muted">No purchases yet.</p></div>
+
+        <h2>Summary</h2>
+        <div id="summaryArea"><p class="muted">Click Finish / Summary when done.</p></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
